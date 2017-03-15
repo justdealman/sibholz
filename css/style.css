@@ -715,6 +715,10 @@ button::-moz-focus-inner {
 	background-color:#a64516;
 	opacity:0.4;
 }
+.video-bg video {
+	-webkit-transform-origin:left top;
+	transform-origin:left top;
+}
 .bg-1 {
 	background:url('../img/section-1-bg.png') no-repeat center center;
 	background-size:auto 100%;
