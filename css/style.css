@@ -907,6 +907,12 @@ button::-moz-focus-inner {
 	border-radius:50%;
 	-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.28);
 	box-shadow:0 1px 3px rgba(0,0,0,0.28);
+	-webkit-transition:all 0.3s ease-out;
+	transition:all 0.3s ease-out;
+}
+.item-new:hover .eye-icon {
+	-webkit-box-shadow:0 5px 10px rgba(0,0,0,0.3);
+	box-shadow:0 5px 10px rgba(0,0,0,0.3);
 }
 .benefits__title {
 	position:absolute;
