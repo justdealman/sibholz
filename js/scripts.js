@@ -132,9 +132,15 @@ $(function() {
 	$('.item-category .pic, [data-scrollable="3"] .portfolio__list .pic').tilt({
 		maxTilt: 4
 	});
+	var checkBrowser = navigator.userAgent.toLowerCase(); 
+	if ( checkBrowser.indexOf('safari') != -1 && checkBrowser.indexOf('chrome') < 0 ) { 
+		var isCssAnimation = false;
+	} else {
+		var isCssAnimation = true;
+	}
 	$('.fullpage').fullpage({
 		anchors: ['welcome', 'sauna', 'spa', 'interior', 'store', 'portfolio', 'news', 'benefits'],
-		css3: true,
+		css3: isCssAnimation,
 		navigation: true,
 		onLeave: function(index, nextIndex, direction) {
 			$('#fp-nav a').removeClass('done');
