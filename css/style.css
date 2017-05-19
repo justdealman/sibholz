@@ -1128,6 +1128,7 @@ button::-moz-focus-inner {
 	display:none !important;
 }
 .content {
+	overflow-x:hidden;
 	max-width:1920px;
 	padding:0 50px 30px;
 	margin:0 auto;
