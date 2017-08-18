@@ -262,4 +262,30 @@ $(function() {
 		e.preventDefault();
 		$(this).toggleClass('is-active');
 	});
+	$('.card__gallery .preview li').on('click', function() {
+		var t = $(this).parents('.card__gallery').find('.main');
+		t.find('[data-main="'+$(this).attr('data-preview')+'"]').addClass('is-visible').siblings().removeClass('is-visible');
+		$(this).addClass('is-active').siblings().removeClass('is-active');
+	});
+	$('.quantity-e .minus').on('click', function(e) {
+		e.preventDefault();
+		var $input = $(this).parent().find('input');
+		var count = parseInt($input.val()) - 1;
+		count = count < 1 ? 1 : count;
+		$input.val(count);
+		$input.change();
+	});
+	$('.quantity-e .plus').on('click', function(e) {
+		e.preventDefault();
+		var $input = $(this).parent().find('input');
+		$input.val(parseInt($input.val()) + 1);
+		$input.change();
+	});
+	$('.item-sauna').on('mouseenter', function() {
+		$('.content').addClass('no-overflow');
+	});
+	$('.item-sauna').on('mouseleave', function() {
+		$('.content').removeClass('no-overflow');
+	});
+	$('input[type="checkbox"]').uniform();
 });
