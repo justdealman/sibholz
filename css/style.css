@@ -3032,6 +3032,110 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	padding:9px 0 14px;
 	margin:0 48px 0 0;
 }
+.fade-bg {
+	visibility:hidden;
+	opacity:0;
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:1000;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.5);
+	-webkit-transition:all 0.2s ease;
+	transition:all 0.2s ease;
+}
+.fade-bg.is-opened {
+	visibility:visible;
+	opacity:1;
+}
+.modal {
+	visibility:hidden;
+	opacity:0;
+	position:absolute;
+	left:50%;
+	top:30px;
+	z-index:1010;
+	width:480px;
+	text-align:center;
+	padding:30px 40px 20px;
+	margin-left:-240px;
+	background:#ffffff;
+	-webkit-border-radius:20px 0 20px 20px;
+	border-radius:20px 0 20px 20px;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-transform:translateY(-5px);
+	transform:translateY(-5px);
+	-webkit-transition:-webkit-transform 0.2s ease;
+	transition:transform 0.2s ease;
+}
+.modal.is-opened {
+	display:block;
+	height:auto;
+	visibility:visible;
+	opacity:1;
+	-webkit-transform:translateY(0);
+	transform:translateY(0);
+}
+.modal--close {
+	position:absolute;
+	right:0;
+	top:0;
+	display:block;
+	width:42px;
+	height:42px;
+	cursor:pointer;
+	background:#979797;
+}
+.modal--close:before,
+.modal--close:after {
+	content:'';
+	position:absolute;
+	left:50%;
+	top:50%;
+	width:24px;
+	height:2px;
+	margin:-1px 0 0 -12px;
+	background:#ffffff;
+}
+.modal--close:before {
+	-webkit-transform:rotate(-45deg);
+	transform:rotate(-45deg);
+}
+.modal--close:after {
+	-webkit-transform:rotate(45deg);
+	transform:rotate(45deg);
+}
+.modal h4 {
+	font-size:24px;
+	line-height:30px;
+	font-weight:300;
+	font-family:'Roboto Slab', sans-serif;
+	text-align:left;
+	padding:0;
+	margin:0 0 25px;
+}
+.modal p {
+	margin:0 0 15px;
+}
+.modal input,
+.modal textarea {
+	width:100%;
+	font-size:15px;
+	font-weight:300;
+	padding:12px 14px 13px;
+	background:#ffffff;
+	-webkit-border-radius:22px;
+	border-radius:22px;
+}
+.modal .button {
+	min-width:120px;
+	font-size:16px;
+	line-height:20px;
+	padding:14px 19px 16px;
+	margin:10px 0 15px;
+}
 @media all and (max-width:1360px) {
 	.header {
 		padding-left:70px;
@@ -4016,6 +4120,39 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	}
 	.product__rc .button {
 		margin:20px 0 0;
+	}
+	.modal {
+		width:290px;
+		padding:20px 20px 10px;
+		margin-left:-145px;
+	}
+	.modal--close {
+		width:28px;
+		height:28px;
+	}
+	.modal--close:before,
+	.modal--close:after {
+		width:16px;
+		height:2px;
+		margin:-1px 0 0 -8px;
+	}
+	.modal h4 {
+		font-size:18px;
+		line-height:22px;
+		margin:0 0 15px;
+	}
+	.modal p {
+		margin:0 0 10px;
+	}
+	.modal p input,
+	.modal p textarea {
+		font-size:15px;
+		padding:9px 12px;
+	}
+	.modal .button {
+		font-size:14px;
+		line-height:18px;
+		margin:5px 0 10px;
 	}
 }
 
