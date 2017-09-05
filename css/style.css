@@ -3146,6 +3146,39 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	padding:14px 19px 16px;
 	margin:10px 0 15px;
 }
+.filter-selected {
+	position:absolute;
+	z-index:100;
+	text-align:center;
+	padding:20px 40px 25px;
+	margin:-32px 0 0 -40px;
+	background:#ffffff;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	-webkit-box-shadow:0 5px 30px rgba(0,0,0,0.3);
+	box-shadow:0 5px 30px rgba(0,0,0,0.3);
+}
+.filter-selected:before {
+	content:'';
+	position:absolute;
+	left:-10px;
+	top:30px;
+	border-top:10px solid transparent;
+	border-bottom:10px solid transparent;
+	border-right:10px solid #ffffff;
+}
+.filter-selected p {
+	font-size:20px;
+	line-height:26px;
+	font-weight:300;
+	margin:0 0 20px;
+}
+.filter-selected p strong {
+	font-weight:normal;
+}
+.filter-selected .button {
+	width:100%;
+}
 @media all and (max-width:1360px) {
 	.header {
 		padding-left:70px;

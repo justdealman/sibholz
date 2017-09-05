@@ -316,6 +316,29 @@ $(function() {
 			menuClose();
 		}
 	});
+	function removeFilterSelected() {
+		$('.filter-selected').remove();
+	}
+	$('.filter input[type="checkbox"]').change(function() {
+		removeFilterSelected();
+		var quantity = ' '+(Math.random()*100).toFixed(0);
+		$('body').append('<div class="filter-selected">\
+			<p>Выбрано: <strong>'+quantity+'</strong></p>\
+			<button class="button filter-select-show">Показать</button>\
+		</div>');
+		$('.filter-selected').css({
+			left: $('.filter').offset().left+$('.filter').outerWidth(),
+			top: $(this).offset().top
+		});
+	});
+	$(document).on('click', function(e) {
+		if ( !$(e.target).closest('.filter-selected').length && !$(e.target).closest('.filter label').length ) {
+			removeFilterSelected();
+		}
+	});
+	$(document).on('click', '.filter-select-show', function() {
+		console.log('Рефреш товаров');
+	});
 });
 if ( $('[data-constructor]').length ) {
 	$(function() {
