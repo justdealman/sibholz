@@ -315,6 +315,29 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 .header--phone:hover:before {
 	background-position:0 -16px;
 }
+.header--basket {
+	position:absolute;
+	right:287px;
+	top:36px;
+	display:block;
+	font-size:14px;
+	line-height:16px;
+	font-weight:300;
+	text-decoration:underline;
+	padding:5px 5px 5px 36px;
+}
+.header--basket:before {
+	content:'';
+	position:absolute;
+	left:5px;
+	top:5px;
+	width:26px;
+	height:21px;
+	background:url('../img/basket-icon-2.svg') no-repeat 0 0;
+}
+.header--basket:hover {
+	text-decoration:none;
+}
 .header--social {
 	position:absolute;
 	left:0;
@@ -3293,6 +3316,11 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	.header_inner .nav--item:hover .nav--link:after,
 	.header_inner .nav--item.active .nav--link:after {
 		display:none;
+	}
+	.header--basket {
+		top:15px;
+		right:190px;
+		text-decoration:none;
 	}
 	.subnav {
 		display:none !important;
