@@ -2179,6 +2179,9 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	background:#da8a08;
 	border-color:#da8a08;
 }
+[data-tab] {
+	display:none;
+}
 .card__information h2 {
 	font-size:36px;
 	line-height:48px;

@@ -339,6 +339,16 @@ $(function() {
 	$(document).on('click', '.filter-select-show', function() {
 		console.log('Рефреш товаров');
 	});
+	$('[data-tab-nav] .link').on('click', function(e) {
+		e.preventDefault();
+		var p = $(this).parents('[data-has-tabs]');
+		var t = p.find('[data-tab="'+$(this).attr('href')+'"]');
+		if ( t.is(':hidden') ) {
+			t.show().siblings('[data-tab]').hide();
+			$(this).addClass('active').siblings().removeClass('active');
+		}
+	});
+	$('[data-tab-nav] .link.active').trigger('click');
 });
 if ( $('[data-constructor]').length ) {
 	$(function() {
