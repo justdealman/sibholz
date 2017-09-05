@@ -317,3 +317,51 @@ $(function() {
 		}
 	});
 });
+if ( $('[data-constructor]').length ) {
+	$(function() {
+		var baseUrl = $('[data-base]').data('base');
+		var currentSize = '';
+		$('.card__data--package').on('click', 'li', function(e) {
+			if ( !$(this).hasClass('active') ) {
+				var t = $(this);
+				t.addClass('active').siblings().removeClass('active');
+				currentSize = t.data('size');
+				if ( $(this).parents('.item-sauna').length ) {
+					var p = $(this).parents('.item-sauna');
+					var img = p.find('[data-image]');
+				}
+				p.find('.pic').addClass('is-hidden');
+				delay = setTimeout(function() {
+					img.attr('src',t.data('url')).load(function() {
+						p.find('.pic').removeClass('is-hidden');
+					});
+					setImgContain(img);
+				}, 100)
+			}
+		});
+		$('.card__data--color li').on('click', function(e) {
+			if ( !$(this).hasClass('active') ) {
+				var e = $(this).data('available').split(',');
+				if ( $(this).parents('.item-sauna').length ) {
+					var p = $(this).parents('.item-sauna');
+					var t = p.find('.card__data--package');
+				}
+				t.empty();
+				$.each(e, function() {
+					var result = this.split(':');
+					t.append('<li data-url="'+baseUrl+result[1].replace(/\s+/g,'')+'" data-size="'+result[0].replace(/\s+/g,'')+'">'+result[0].replace(/\s+/g,'')+'</li>')
+				});
+				p.find('.current-color').text($(this).data('color'));
+				if ( t.find('[data-size="'+currentSize+'"]').length ) {
+					t.find('[data-size="'+currentSize+'"]').trigger('click');
+				} else {
+					t.find('li').eq(0).trigger('click')
+				}
+				$(this).addClass('active').siblings().removeClass('active');
+			}
+		});
+		$('.card__data--color').each(function() {
+			$(this).find('li').eq(0).trigger('click');
+		});
+	});
+}

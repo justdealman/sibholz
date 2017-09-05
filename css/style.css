@@ -2335,6 +2335,9 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	margin:0 8px 8px 0;
 	border:1px solid #d8d8d8;
 }
+.card__data--color li.active {
+	border-color:#f5a623;
+}
 .card__data--package {
 	clear:both;
 	overflow:hidden;
@@ -2522,6 +2525,13 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 .item-sauna .pic {
 	height:269px;
 	margin:0 0 20px;
+	-webkit-transition:all 0.1s ease-out;
+	transition:all 0.1s ease-out;
+}
+.item-sauna .pic.is-hidden {
+	-webkit-transform:scale(0.95);
+	transform:scale(0.95);
+	opacity:0;
 }
 .item-sauna__title {
 	overflow:hidden;
