@@ -2668,7 +2668,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	width:75%;
 	vertical-align:top;
 }
-.sauna-list__grid_rc > li {
+.sauna-list__grid_col-3 > li {
 	width:33.33%;
 }
 .filter {
@@ -3320,6 +3320,64 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 .filter-selected .button {
 	width:100%;
 }
+.pagination-e {
+	font-size:0;
+	text-align:center;
+	margin:0 0 50px;
+}
+.pagination-e a,
+.pagination-e span {
+	display:inline-block;
+	font-size:20px;
+	line-height:30px;
+	vertical-align:top;
+	padding:2px 8px 8px;
+	margin:0 2px;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.pagination-e span.active {
+	color:#ffffff;
+	background:#f5a623;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+}
+.pagination-e .prev,
+.pagination-e .next {
+	position:relative;
+	width:51px;
+	height:40px;
+	background:#f5a623;
+}
+.pagination-e .prev {
+	margin-right:8px;
+	-webkit-border-radius:20px 0 0 20px;
+	border-radius:20px 0 0 20px;
+}
+.pagination-e .prev:before {
+	content:'';
+	position:absolute;
+	left:19px;
+	top:8px;
+	width:11px;
+	height:22px;
+	background:url('../img/pagination-prev.svg') no-repeat 0 0;
+}
+.pagination-e .next {
+	margin-left:8px;
+	-webkit-border-radius:0 20px 20px 0;
+	border-radius:0 20px 20px 0;
+}
+.pagination-e .next:before {
+	content:'';
+	position:absolute;
+	left:20px;
+	top:8px;
+	width:11px;
+	height:22px;
+	background:url('../img/pagination-next.svg') no-repeat 0 0;
+}
+sssssss
 @media all and (max-width:1360px) {
 	.header {
 		padding-left:70px;

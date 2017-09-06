@@ -1,0 +1,18 @@
+<svg width="11" height="22" viewBox="0 0 11 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas" transform="translate(-493 -844)">
+<g id="arrow">
+<g id="Rectangle 25">
+<mask id="mask0_outline_ins">
+<use xlink:href="#path0_fill" fill="white" transform="matrix(0.707107 0.707107 -0.707107 0.707107 503.607 844)"/>
+</mask>
+<g mask="url(#mask0_outline_ins)">
+<use xlink:href="#path1_stroke_2x" transform="matrix(0.707107 0.707107 -0.707107 0.707107 503.607 844)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 15 15L 0 15L 0 0"/>
+<path id="path1_stroke_2x" d="M 0 15L -2 15L -2 17L 0 17L 0 15ZM 15 13L 0 13L 0 17L 15 17L 15 13ZM 2 15L 2 0L -2 0L -2 15L 2 15Z"/>
+</defs>
+</svg>
