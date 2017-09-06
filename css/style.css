@@ -3212,8 +3212,10 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	padding:30px 40px 20px;
 	margin-left:-240px;
 	background:#ffffff;
-	-webkit-border-radius:20px 0 20px 20px;
-	border-radius:20px 0 20px 20px;
+	-webkit-border-radius:18px;
+	border-radius:18px;
+	-webkit-box-shadow:0 0 46px rgba(0,0,0,0.28);
+	box-shadow:0 0 46px rgba(0,0,0,0.28);
 	-webkit-box-sizing:border-box;
 	box-sizing:border-box;
 	-webkit-transform:translateY(-5px);
@@ -3234,29 +3236,18 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	right:0;
 	top:0;
 	display:block;
-	width:42px;
-	height:42px;
+	width:60px;
+	height:59px;
 	cursor:pointer;
-	background:#979797;
-}
-.modal--close:before,
-.modal--close:after {
-	content:'';
-	position:absolute;
-	left:50%;
-	top:50%;
-	width:24px;
-	height:2px;
-	margin:-1px 0 0 -12px;
-	background:#ffffff;
 }
 .modal--close:before {
-	-webkit-transform:rotate(-45deg);
-	transform:rotate(-45deg);
-}
-.modal--close:after {
-	-webkit-transform:rotate(45deg);
-	transform:rotate(45deg);
+	content:'';
+	position:absolute;
+	left:20px;
+	top:20px;
+	width:20px;
+	height:19px;
+	background:url('../img/modal-close.svg') no-repeat 0 0;
 }
 .modal h4 {
 	font-size:24px;
@@ -3286,6 +3277,36 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	line-height:20px;
 	padding:14px 19px 16px;
 	margin:10px 0 15px;
+}
+.modal_added {
+	width:793px;
+	padding:39px 50px 17px;
+	margin-left:-396px;
+}
+.modal_added h3 {
+	font-size:36px;
+	line-height:42px;
+	padding:0;
+	margin:0 0 15px;
+}
+.modal_added p {
+	color:#8B8B8B;
+	font-size:14px;
+	line-height:18px;
+	margin:0 0 24px;
+}
+.modal_added .pic {
+	width:300px;
+	height:287px;
+	margin:0 auto 39px;
+}
+.modal_added .button {
+	font-size:20px;
+	line-height:30px;
+	padding:14px 30px 21px;
+	margin:0 0 20px;
+	-webkit-border-radius:33px;
+	border-radius:33px;
 }
 .filter-selected {
 	position:absolute;
