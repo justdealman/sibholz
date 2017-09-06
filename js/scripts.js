@@ -287,7 +287,7 @@ $(function() {
 	$('.item-sauna').on('mouseleave', function() {
 		$('.content').removeClass('no-overflow');
 	});
-	$('input[type="checkbox"]').uniform();
+	$('input[type="checkbox"], input[type="radio"]').uniform();
 	$('[data-open]').on('click', function(e) {
 		e.preventDefault();
 		$(this).addClass('is-active');
