@@ -2260,11 +2260,33 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	margin:14px 0 26px;
 }
 .card__data {
+	position:relative;
 	margin:0 0 10px;
 	-webkit-border-radius:2px;
 	border-radius:2px;
 	-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.3);
 	box-shadow:0 1px 3px rgba(0,0,0,0.3);
+}
+.card__color-zoom {
+	overflow:hidden;
+	position:absolute;
+	right:100%;
+	width:320px;
+	height:320px;
+	margin-right:30px;
+	border:1px solid #d8d8d8;
+	-webkit-transform-origin:100% 0;
+	transform-origin:100% 0;
+	-webkit-transform:scale(0);
+	transform:scale(0);
+	-webkit-transition:-webkit-transform 0.5s ease-out, -webkit-box-shadow 0.5s ease-out;
+	transition:transform 0.5s ease-out, box-shadow 0.5s ease-out;
+}
+.card__color-zoom.is-active {
+	-webkit-transform:scale(1);
+	transform:scale(1);
+	-webkit-box-shadow:0 5px 10px rgba(0,0,0,0.3);
+	box-shadow:0 5px 10px rgba(0,0,0,0.3);
 }
 .card__data--price {
 	clear:both;

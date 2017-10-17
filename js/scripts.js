@@ -398,3 +398,23 @@ if ( $('[data-constructor]').length ) {
 		});
 	});
 }
+$(function() {
+	var delay;
+	$('.card__data .card__data--color li').on('mouseover', function() {
+		clearTimeout(delay);
+		var t = $('.card__color-zoom');
+		t.css({
+			top: $(this).parents('.card__data--color').offset().top-$('.card__data').offset().top,
+			background: 'url('+$(this).find('img').attr('src')+') no-repeat 50% 50%',
+			'background-size': 'cover'
+		});
+		if ( !$(this).hasClass('is-active') ) {
+			t.addClass('is-active');
+		}
+	});
+	$('.card__data .card__data--color li').on('mouseout', function() {
+		delay = setTimeout(function() {
+			$('.card__color-zoom').removeClass('is-active');
+		}, 200);
+	});
+});
